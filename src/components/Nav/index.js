@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { routes } from '../routes';
 
-export const Nav = () => {
+const Nav = () => {
     <nav>
         <ul>
             <li><Link to={routes.HOME}>Globant logo</Link></li>
@@ -15,3 +15,5 @@ export const Nav = () => {
     </nav>
 
 }
+
+export default Nav;
