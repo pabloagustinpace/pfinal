@@ -110,6 +110,33 @@ export const getIngredients = () => {
   }
 };
 
+export const getIngredientsByID = (id) => {
+  return dispatch => {
+   // First dispatch: the app state is updated to inform
+   // that the API call is starting.
+    dispatch({
+     type: actionTypes.GET_INGREDIENTSID
+   });
+
+   // Then we attempt the login
+   return axios.get(`${API_ENDPOINT_BASE}/ingredients/${id}`)
+     .then(response => {
+       // Dispatch success!
+       dispatch({
+         type: actionTypes.GET_INGREDIENTSID_SUCCESS,
+         ingredient: response.data
+       });
+     })
+     .catch(error => {
+       // Dispatch failure!
+       dispatch({
+         type: actionTypes.GET_INGREDIENTSID_ERROR,
+         error: error.response
+       });
+     });
+  }
+};
+
 export const getGalleries = () => {
   return dispatch => {
    // First dispatch: the app state is updated to inform

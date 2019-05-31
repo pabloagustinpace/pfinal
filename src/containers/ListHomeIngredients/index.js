@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getIngredients } from '../../redux/actions'
-import ReactMarkdown from 'react-markdown';
+import { getIngredients } from '../../redux/actions';
+import IngredientPreview from '../../components/IngredientPreview';
 
 const mapStateToProps = (state) => ({
     loading: state.ingredients.isIngredientsLoading === true,
@@ -14,13 +14,14 @@ class Ingredients extends React.Component {
     }
   
     render() {
+        console.log(this.props);
        return (
            <React.Fragment>
               {this.props.loading ? <p>CARGANDO....</p>:
                   <div>
                       <h1>Tenemos {this.props.ingredients.length} ingredientes</h1>
-                      {this.props.ingredients.map(ingredient => {
-                          return <ReactMarkdown key={ingredient._id} source={ingredient.name} />
+                      {this.props.ingredients.map((ingredient,index) => {
+                          return <IngredientPreview key={ingredient.id} {...ingredient} />
                       })}
                   </div>
               }

@@ -18,7 +18,7 @@ function App() {
     <BrowserRouter>
       <div className="mainpage">
         <Nav />
-        <div className="app-container__inner">
+        <div className="mainpage__inner">
           <Switch>
             <Route exact path={`${routes.HOME}`} component={Home} />
             <Route exact path={`${routes.RECIPES}`} component={Recipes} />

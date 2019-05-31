@@ -1,12 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import nullimage from '../../images/nullimage.png';
 
-const IngredientPreview = () => {
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="..."/>
-    <div class="card-body">
-      <p class="card-text">nombre del ingrediente.</p>
-    </div>
+const IngredientPreview = ({id,image,name}) => {
+  return(
+  <div>
+    <Link to={`/ingredients/${id}`}>
+    <img src={image ? image.url : nullimage}/>
+    </Link>/>
+      <p>{name}</p>
   </div>
+  )
 }
 
 export default IngredientPreview;
