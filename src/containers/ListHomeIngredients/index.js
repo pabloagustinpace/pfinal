@@ -1,7 +1,32 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { getIngredients } from '../../redux/actions'
+import ReactMarkdown from 'react-markdown';
 
-const lhi = () => {
-    return <h1> lhi </h1>
-}
+const mapStateToProps = (state) => ({
+    loading: state.ingredients.isIngredientsLoading === true,
+    ingredients: state.ingredients.ingredients
+});
 
-export default lhi;
+class Ingredients extends React.Component {
+    componentWillMount(){
+      this.props.dispatch(getIngredients());
+    }
+  
+    render() {
+       return (
+           <React.Fragment>
+              {this.props.loading ? <p>CARGANDO....</p>:
+                  <div>
+                      <h1>Tenemos {this.props.ingredients.length} ingredientes</h1>
+                      {this.props.ingredients.map(ingredient => {
+                          return <ReactMarkdown key={ingredient._id} source={ingredient.name} />
+                      })}
+                  </div>
+              }
+           </React.Fragment>
+       )
+    }
+  }
+  
+  export default connect(mapStateToProps, null)(Ingredients);

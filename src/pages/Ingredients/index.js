@@ -1,7 +1,10 @@
 import React from 'react';
+import Ingredients from '../../containers/ListHomeIngredients';
 
-const Ingredients = () => {
-    return <h1> Ingredients </h1>
+const ings = () => {
+    return (
+        <Ingredients/>
+    )
 }
 
-export default Ingredients;
+export default ings;

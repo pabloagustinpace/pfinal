@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getRecipes } from '../redux/actions'
+import { getRecipes } from '../../redux/actions'
 import ReactMarkdown from 'react-markdown';
 
 const mapStateToProps = (state) => ({

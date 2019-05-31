@@ -1,7 +1,10 @@
 import React from 'react';
+import Chefs from '../../containers/ListChefs';
 
-const Chefs = () => {
-    return <h1> Chefs </h1>
+const Cfs = () => {
+    return (
+        <Chefs/>
+    )
 }
 
-export default Chefs;
+export default Cfs;

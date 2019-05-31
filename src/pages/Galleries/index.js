@@ -1,7 +1,12 @@
 import React from 'react';
+import Galleries from '../../containers/ListGalleries';
 
-const Gallerie = () => {
-    return <h1> Gallerie </h1>
+const gal = () => {
+    return(
+        <div>
+            < Galleries />
+        </div>
+    )
 }
 
-export default Gallerie;
+export default gal;

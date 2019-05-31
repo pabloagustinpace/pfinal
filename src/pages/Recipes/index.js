@@ -1,10 +1,10 @@
 import React from 'react';
-import recipcont from '../../containers/ListHomeReceipes';
+import Recipes from '../../containers/ListHomeReceipes';
 
 const lhr = () => {
     return(
         <div>
-            < recipcont />
+            < Recipes />
         </div>
     )
 }
