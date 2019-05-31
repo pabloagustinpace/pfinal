@@ -1,7 +1,12 @@
 import React from 'react';
+import recipcont from '../../containers/ListHomeReceipes';
 
-const Recipes = () => {
-    return <h1> Recipes </h1>
+const lhr = () => {
+    return(
+        <div>
+            < recipcont />
+        </div>
+    )
 }
 
-export default Recipes;
+export default lhr;
