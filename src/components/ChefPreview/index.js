@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import nullimage from '../../images/nullimage.png';
 
 const ChefPreview = ({id,full_name,image}) => {
   return(

@@ -16,7 +16,7 @@ class DetailIngredient extends React.Component{
   }
 
   render(){
- 
+    console.log(this.props)  
     return(
       <div>
         {this.props.loading ? <p>CARGANDO....</p>:

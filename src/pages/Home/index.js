@@ -4,11 +4,11 @@ import ListHomeIngredients from '../../containers/ListHomeIngredients';
 
 const Home = () => {
     return(
-        <div class="main-container">
-            <div class="container" >
+        <div className="main-container">
+            <div className="container" >
                 <ListHomeRecipes />
             </div>
-            <div class = "container">
+            <div className = "container">
                 <ListHomeIngredients />
             </div>
         </div>

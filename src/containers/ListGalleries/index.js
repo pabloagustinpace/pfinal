@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getGalleries } from '../../redux/actions'
-import ReactMarkdown from 'react-markdown';
+import { getGalleries } from '../../redux/actions';
+import GalleriePreview from '../../components/GalleriePreview';
 
 const mapStateToProps = (state) => ({
     loading: state.galleries.isGalleriesLoading === true,
@@ -14,13 +14,14 @@ class Galleries extends React.Component {
     }
   
     render() {
+        console.log(this.props)
        return (
            <React.Fragment>
               {this.props.loading ? <p>CARGANDO....</p>:
                   <div>
                       <h1>Tenemos {this.props.galleries.length} galerias</h1>
-                      {this.props.galleries.map(gallerie => {
-                          return <ReactMarkdown key={gallerie._id} source={gallerie.title} />
+                      {this.props.galleries.map((gallerie,index) => {
+                          return <GalleriePreview key={gallerie.id} {...gallerie} />
                       })}
                   </div>
               }

@@ -4,7 +4,7 @@ import {getGalleriesID} from '../../redux/actions';
 
 const mapStateToProps = (state) => ({
   loading: state.gallerieid.isGallerieIDLoanding === true,
-  chef: state.gallerieid.gallerie
+  gallerie: state.gallerieid.gallerie
 });
 class DetailGallerie extends React.Component{
 
@@ -21,7 +21,7 @@ class DetailGallerie extends React.Component{
       <div>
         {this.props.loading ? <p>CARGANDO....</p>:
           <div>
-            holi
+            {this.props.gallerie.title}
           </div>
         }
       </div>
