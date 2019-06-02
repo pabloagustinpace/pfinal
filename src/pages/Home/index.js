@@ -2,13 +2,14 @@ import React from 'react';
 import ListHomeRecipes from '../../containers/ListHomeReceipes';
 import ListHomeIngredients from '../../containers/ListHomeIngredients';
 
+
 const Home = () => {
     return(
-        <div className="main-container">
-            <div className="container" >
+        <div>
+            <div>
                 <ListHomeRecipes />
             </div>
-            <div className = "container">
+            <div className="container">
                 <ListHomeIngredients />
             </div>
         </div>

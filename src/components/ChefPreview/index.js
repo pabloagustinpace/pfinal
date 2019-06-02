@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import nullimage from '../../images/nullimage.png';
+import './style.scss';
 
 const ChefPreview = ({id,full_name,image}) => {
   return(
-  <div>
+  <div className="card">
     <Link to={`/chefs/${id}`}>
-    <img src={image.url}/>
+      <img src={image ? image.url : nullimage}/>
     </Link>
-    <p>{full_name}</p>
+      <h4><b>{full_name}</b></h4> 
   </div>
   )
 }

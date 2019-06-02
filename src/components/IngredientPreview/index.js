@@ -9,9 +9,7 @@ const IngredientPreview = ({id,image,name}) => {
     <Link to={`/ingredients/${id}`}>
       <img src={image ? image.url : nullimage}/>
     </Link>
-    <div className="container">
       <h4><b>{name}</b></h4> 
-    </div>
   </div>
   )
 }
