@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {getChefID} from '../../redux/actions';
 
 const mapStateToProps = (state) => ({
-  loading: state.chefid.isChefsidLoading === true,
+  loading: state.chefid.isChefIDLoanding === true,
   chef: state.chefid.chef
 });
 class DetailChef extends React.Component{
@@ -21,7 +21,7 @@ class DetailChef extends React.Component{
       <div>
         {this.props.loading ? <p>CARGANDO....</p>:
           <div>
-            holita
+            {this.props.chef.full_name}
           </div>
         }
       </div>

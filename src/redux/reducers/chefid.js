@@ -1,7 +1,7 @@
 import actionTypes from "../actionTypes";
 
 const initialState = {
-  isChefiIDLoanding: true,
+  isChefIDLoanding: true,
   chef: []
 }
 
@@ -10,14 +10,14 @@ export default function(state = initialState, action) {
     case actionTypes.GET_CHEFSID: {
       return {
         ...state,
-        isChefiIDLoanding: true,
+        isChefIDLoanding: true,
         chef: []
       };
     }
     case actionTypes.GET_CHEFSID_SUCCESS: {
       return {
         ...state,
-        isChefiIDLoanding: false,
+        isChefIDLoanding: false,
         chef: action.chef
       };
     }
