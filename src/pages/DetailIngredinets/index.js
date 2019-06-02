@@ -1,7 +1,10 @@
 import React from 'react';
+import DetailIngredient from '../../containers/ingredientDetail';
 
-const detIngredients = () => {
-    return <h1> detIngredients </h1>
+const detIngredients = (props) => {
+    return(
+        <DetailIngredient {...props} />
+    )
 }
 
 export default detIngredients;

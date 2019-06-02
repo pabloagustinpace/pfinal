@@ -1,17 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import {getIngredientsByID} from '../../redux/actions';
 
-const ingdet = ({ title, id, url}) => (
-<div class="card">
-<img src={url} class="card-img-top" alt="..."/>
-<div class="card-body">
-  <h5 class="card-title">{title}</h5>
-  <p class="card-text">{id}</p>
-</div>
-<div class="card-body">
-  <a href="#" class="card-link"><Link to='/'>Volver a la lista</Link></a>
-</div>
-</div>
-);
+const mapStateToProps = (state) => ({
+  loading: state.ingredientsid.isIngredientsidLoading === true,
+  ingredient: state.ingredientsid.ingredient
+});
+class DetailIngredient extends React.Component{
 
-export default ingdet;
+  async componentWillMount(){
+    const { match } = this.props; 
+    const { params } = match;
+    const { idIngredients } = params;
+    this.props.dispatch(getIngredientsByID(idIngredients));
+  }
+
+  render(){
+ 
+    return(
+      <div>
+        {this.props.loading ? <p>CARGANDO....</p>:
+          <div>
+            {this.props.ingredient.name}
+          </div>
+        }
+      </div>
+    );
+  }
+}
+
+export default connect(mapStateToProps, null) (DetailIngredient);

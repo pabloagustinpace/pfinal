@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getRecipes } from '../../redux/actions'
-import ReactMarkdown from 'react-markdown';
+import { getRecipes } from '../../redux/actions';
+import RecipePreview from '../../components/RecipePreview'
 
 const mapStateToProps = (state) => ({
     loading: state.recipes.isRecipesLoading === true,
@@ -14,13 +14,14 @@ class Recipes extends React.Component {
     }
   
     render() {
+        console.log(this.props)
        return (
            <React.Fragment>
               {this.props.loading ? <p>CARGANDO....</p>:
                   <div>
                       <h1>Tenemos {this.props.recipes.length} recetas</h1>
-                      {this.props.recipes.map(recipe => {
-                          return <ReactMarkdown key={recipe._id} source={recipe.instructions} />
+                      {this.props.recipes.map((recipe,index) => {
+                          return <RecipePreview key={recipe.id} {...recipe} />
                       })}
                   </div>
               }

@@ -1,24 +1,24 @@
 import actionTypes from "../actionTypes";
 
 const initialState = {
-  isRecipeIDLoanding: true,
-  recipe: []
+  isChefiIDLoanding: true,
+  chef: []
 }
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case actionTypes.GET_RECIPESID: {
+    case actionTypes.GET_CHEFSID: {
       return {
         ...state,
-        isRecipeIDLoanding: true,
-        recipe: []
+        isChefiIDLoanding: true,
+        chef: []
       };
     }
-    case actionTypes.GET_RECIPESID_SUCCESS: {
+    case actionTypes.GET_CHEFSID_SUCCESS: {
       return {
         ...state,
-        isRecipeIDLoanding: false,
-        recipe: action.recipe
+        isChefiIDLoanding: false,
+        chef: action.chef
       };
     }
     default:
