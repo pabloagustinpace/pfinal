@@ -6,5 +6,6 @@ import ingredients from "./ingredients";
 import galleries from "./galleries";
 import ingredientsid from "./ingredientsid";
 import chefid from "./chefid";
+import gallerieid from "./gallerieid";
 
-export default combineReducers({ recipes, recipeid, chefs, ingredients,galleries,ingredientsid, chefid });
+export default combineReducers({ recipes, recipeid, chefs, ingredients,galleries,ingredientsid, chefid, gallerieid });

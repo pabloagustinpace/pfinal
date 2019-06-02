@@ -1,7 +1,10 @@
 import React from 'react';
+import DetailGallerie  from '../../containers/gallerieDetail';
 
-const detGalleries = () => {
-    return <h1> detGalleries </h1>
+const detGallerie = (props) => {
+    return(
+        <DetailGallerie {...props} />
+    )
 }
 
-export default detGalleries;
+export default detGallerie;

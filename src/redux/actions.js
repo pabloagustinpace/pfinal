@@ -192,3 +192,30 @@ export const getGalleries = () => {
      });
   }
 };
+
+export const getGalleriesID = (id) => {
+  return dispatch => {
+   // First dispatch: the app state is updated to inform
+   // that the API call is starting.
+    dispatch({
+     type: actionTypes.GET_GALLERIESID
+   });
+
+   // Then we attempt the login
+   return axios.get(`${API_ENDPOINT_BASE}/galleries/${id}`)
+     .then(response => {
+       // Dispatch success!
+       dispatch({
+         type: actionTypes.GET_GALLERIESID_SUCCESS,
+         gallerie: response.data
+       });
+     })
+     .catch(error => {
+       // Dispatch failure!
+       dispatch({
+         type: actionTypes.GET_GALLERIESID_ERROR,
+         error: error.response
+       });
+     });
+  }
+};
