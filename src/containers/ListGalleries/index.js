@@ -20,9 +20,11 @@ class Galleries extends React.Component {
               {this.props.loading ? <p>CARGANDO....</p>:
                   <div>
                       <h1>Tenemos {this.props.galleries.length} galerias</h1>
+                      <div className="container">
                       {this.props.galleries.map((gallerie,index) => {
                           return <GalleriePreview key={gallerie.id} {...gallerie} />
                       })}
+                      </div>
                   </div>
               }
            </React.Fragment>

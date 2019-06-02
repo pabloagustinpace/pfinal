@@ -19,9 +19,11 @@ class Chefs extends React.Component {
               {this.props.loading ? <p>CARGANDO....</p>:
                   <div>
                       <h1>Tenemos {this.props.chefs.length} chefs</h1>
+                      <div className="container">
                       {this.props.chefs.map((chef,index) => {
                           return <ChefPreview key={chef._id} {...chef} />
                       })}
+                      </div>
                   </div>
               }
            </React.Fragment>

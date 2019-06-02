@@ -9,7 +9,7 @@ const Home = () => {
             <div>
                 <ListHomeRecipes />
             </div>
-            <div className="container">
+            <div>
                 <ListHomeIngredients />
             </div>
         </div>
