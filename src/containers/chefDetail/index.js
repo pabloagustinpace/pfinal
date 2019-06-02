@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {getChefID} from '../../redux/actions';
+import RecipePreview from '../../components/RecipePreview';
 
 const mapStateToProps = (state) => ({
   loading: state.chefid.isChefIDLoanding === true,
@@ -21,7 +22,18 @@ class DetailChef extends React.Component{
       <div>
         {this.props.loading ? <p>CARGANDO....</p>:
           <div>
-            {this.props.chef.full_name}
+            <h1>
+              {this.props.chef.full_name}
+            </h1>
+            <p>
+              {this.props.chef.bio}
+            </p>
+            <img src={this.props.chef.image.url}/>
+            <div className="container">
+              {this.props.chef.recipes.map((recipe,index) => {
+              return <RecipePreview key={recipe.id} {...recipe} />
+              })}
+            </div>
           </div>
         }
       </div>
