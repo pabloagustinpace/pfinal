@@ -26,10 +26,11 @@ class DetailChef extends React.Component{
             <h1>
               {this.props.chef.full_name}
             </h1>
-            <img alt="" src={this.props.chef.image.url}/>
+            <img alt="" src={this.props.chef.image.url} className="chef_photo"/>
             <p>
               {this.props.chef.bio}
             </p>
+            <h2>Recetas de {this.props.chef.full_name}:</h2>
             <div className="container_recipe">
               {this.props.chef.recipes.map((recipe,index) => {
               return <RecipePreview key={recipe.id} {...recipe} />

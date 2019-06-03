@@ -11,7 +11,7 @@ const RecipePreview = ({id,main_image,title,chef,prep_time,rating}) => {
       <img alt="" src={main_image ? main_image.url : nullimage}/>
     </Link>
       <h4><b>{title}</b></h4> 
-      <p>Chef: {chef.full_name}</p>
+      {chef.full_name && <p>Chef: {chef.full_name}</p>}
       <p>Tiempo: {prep_time}</p>
       <p className="star_color"> {rating}/5 ★ </p>  
   </div>
