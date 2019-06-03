@@ -31,6 +31,7 @@ class DetailIngredient extends React.Component{
             <p>{this.props.ingredient.calories}</p>
             <h2>Informacion nutricional:</h2>
             <p>{this.props.ingredient.nutritional_value}</p>
+            <h2>Recetas con {this.props.ingredient.name}:</h2>
             {this.props.ingredient.recipes.map((recipe,index) => {
               return <RecipePreview key={recipe.id} {...recipe} />
               })}
