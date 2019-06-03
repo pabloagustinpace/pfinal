@@ -18,7 +18,7 @@ class DetailIngredient extends React.Component{
   }
 
   render(){
-    console.log(this.props)  
+    console.log(this.props.ingredient.recipes)  
     return(
       <div>
         {this.props.loading ? <p>CARGANDO....</p>:
@@ -31,11 +31,6 @@ class DetailIngredient extends React.Component{
             <p>{this.props.ingredient.calories}</p>
             <h2>Informacion nutricional:</h2>
             <p>{this.props.ingredient.nutritional_value}</p>
-            <div className="container">
-              {this.props.ingredient.recipes.map((recipe,index) => {
-              return <RecipePreview key={recipe.id} {...recipe} />
-              })}
-            </div>
           </div>
         }
       </div>

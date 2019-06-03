@@ -27,7 +27,6 @@ class DetailRecipe extends React.Component{
             {this.props.recipe.title}
             </h1>
             <img alt="" src={this.props.recipe.main_image.url} className="recipe_image"/>
-            <div></div>
             <div><ReactMarkdown key={this.props.recipe._id} source={this.props.recipe.instructions} /></div>
             <h2>Chef:</h2>
             <div><ChefPreview key={this.props.recipe.chef._id} {...this.props.recipe.chef}/></div>
