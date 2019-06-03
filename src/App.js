@@ -12,6 +12,7 @@ import DetailGalleries from './pages/DetailGalleries';
 import Ingredients from './pages/Ingredients';
 import DetailIngredients from './pages/DetailIngredinets';
 import Nav from './components/Nav';
+import './style.scss';
 
 function App() {
   return (

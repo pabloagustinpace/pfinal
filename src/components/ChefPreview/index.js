@@ -7,7 +7,7 @@ const ChefPreview = ({id,full_name,image}) => {
   return(
   <div className="card">
     <Link to={`/chefs/${id}`}>
-      <img src={image ? image.url : nullimage}/>
+      <img alt="" src={image ? image.url : nullimage}/>
     </Link>
       <h4><b>{full_name}</b></h4> 
   </div>

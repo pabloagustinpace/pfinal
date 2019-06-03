@@ -7,7 +7,7 @@ const GalleriePreview = ({id,title,photos}) => {
   return(
   <div className="card">
     <Link to={`/galleries/${id}`}>
-      <img src={photos ? photos[0].url : nullimage}/>
+      <img alt="" src={photos ? photos[0].url : nullimage}/>
     </Link>
       <h4><b>{title}</b></h4> 
   </div>

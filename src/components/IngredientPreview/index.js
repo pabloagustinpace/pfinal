@@ -7,7 +7,7 @@ const IngredientPreview = ({id,image,name}) => {
   return(
   <div className="card">
     <Link to={`/ingredients/${id}`}>
-      <img src={image ? image.url : nullimage}/>
+      <img alt="" src={image ? image.url : nullimage}/>
     </Link>
       <h4><b>{name}</b></h4> 
   </div>

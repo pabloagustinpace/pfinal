@@ -21,7 +21,12 @@ class DetailGallerie extends React.Component{
       <div>
         {this.props.loading ? <p>CARGANDO....</p>:
           <div>
+            <h1>
             {this.props.gallerie.title}
+            </h1>
+            {this.props.gallerie.photos.map((photo,index) => {
+                          return <img alt="" src={photo.url}/>
+                      })}
           </div>
         }
       </div>

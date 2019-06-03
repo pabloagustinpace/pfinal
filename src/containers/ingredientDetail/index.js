@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {getIngredientsByID} from '../../redux/actions';
+import RecipePreview from '../../containers/ListHomeReceipes';
+import nullimage from '../../images/nullimage.png';
 
 const mapStateToProps = (state) => ({
   loading: state.ingredientsid.isIngredientsidLoading === true,
@@ -21,7 +23,19 @@ class DetailIngredient extends React.Component{
       <div>
         {this.props.loading ? <p>CARGANDO....</p>:
           <div>
+            <h1>
             {this.props.ingredient.name}
+            </h1>
+            <img alt="" src={this.props.ingredient.image ? this.props.ingredient.image.url : nullimage}/>
+            <h2>Calorias:</h2>
+            <p>{this.props.ingredient.calories}</p>
+            <h2>Informacion nutricional:</h2>
+            <p>{this.props.ingredient.nutritional_value}</p>
+            <div className="container">
+              {this.props.ingredient.recipes.map((recipe,index) => {
+              return <RecipePreview key={recipe.id} {...recipe} />
+              })}
+            </div>
           </div>
         }
       </div>
