@@ -20,7 +20,7 @@ class Recipes extends React.Component {
               {this.props.loading ? <p>CARGANDO....</p>:
                   <div>
                       <h1>Tenemos {this.props.recipes.length} recetas</h1>
-                      <div className="container">
+                      <div className="container_food">
                       {this.props.recipes.map((recipe,index) => {
                           return <RecipePreview key={recipe.id} {...recipe} />
                       })}
