@@ -5,14 +5,10 @@ import ListHomeIngredients from '../../containers/ListHomeIngredients';
 
 const Home = () => {
     return(
-        <div>
-            <div>
+        <React.Fragment>
                 <ListHomeRecipes />
-            </div>
-            <div>
                 <ListHomeIngredients />
-            </div>
-        </div>
+        </React.Fragment>
     )
 }
 

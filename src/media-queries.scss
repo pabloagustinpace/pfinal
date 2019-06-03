@@ -1,0 +1,65 @@
+@media screen and (max-width: 375px) {
+    .mainpage{
+        margin: 0 0 0 0;
+        border: 0 0 0 0;
+        padding: 0 0 0 0;
+
+        .main-nav{
+            margin: 0 0 0 0;
+            border: 0 0 0 0;
+            width: auto;
+            overflow: hidden;
+            p{
+                font-size: 1rem;
+            }
+            img{
+                height: auto;
+                width: 2rem;
+            }
+        }
+
+        .mainpage__inner{
+            margin: 0 1rem 0 1rem;
+        }
+        .container_food{
+            overflow: scroll;
+        }
+
+        .recipe_detail{
+            .recipe_image{
+                width: 20rem;
+                height: auto;
+            }   
+        }
+
+        .chef_detail{
+            .bio_photo{
+                flex-wrap: wrap;
+                img{
+                    height: auto;
+                    width: 20rem;
+                }
+                p{
+                    margin: 1rem 0 1rem 0;
+                }
+            }
+            .container_recipe{
+                overflow: scroll;
+            }
+        }
+        
+        .ingredient_detail{
+            .ingredient_photo{
+                width: 20rem;
+                height: auto;
+            }
+            .container_recipe{
+                overflow: scroll;
+            }
+        }
+        .gallerie_foto{
+            height: auto;
+            width: 20rem;
+        }
+    }  
+}
