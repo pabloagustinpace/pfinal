@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {getIngredientsByID} from '../../redux/actions';
-import RecipePreview from '../../containers/ListHomeReceipes';
+import RecipePreview from '../../components/RecipePreview';
 import nullimage from '../../images/nullimage.png';
 
 const mapStateToProps = (state) => ({
