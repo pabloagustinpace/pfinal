@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getIngredients } from '../../redux/actions';
 import IngredientPreview from '../../components/IngredientPreview';
-//import './style.scss';
+import './style.scss';
 
 const mapStateToProps = (state) => ({
     loading: state.ingredients.isIngredientsLoading === true,

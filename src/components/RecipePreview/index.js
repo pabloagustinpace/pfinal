@@ -13,7 +13,7 @@ const RecipePreview = ({id,main_image,title,chef,prep_time,rating}) => {
       <h4><b>{title}</b></h4> 
       <p>by: {chef.full_name}</p>
       <p>Tiempo: {prep_time}</p>
-      <p>{rating} ★ </p>
+      <p className="star_color"> {rating}/5 ★ </p>
   </div>
   )
 }
