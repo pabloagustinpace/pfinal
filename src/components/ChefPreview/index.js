@@ -5,7 +5,7 @@ import './style.scss';
 
 const ChefPreview = ({id,full_name,image}) => {
   return(
-  <div className="card">
+  <div className="card_chef">
     <Link to={`/chefs/${id}`}>
       <img alt="" src={image ? image.url : nullimage}/>
     </Link>

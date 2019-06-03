@@ -21,7 +21,7 @@ class Ingredients extends React.Component {
               {this.props.loading ? <p>CARGANDO....</p>:
                   <div>
                       <h1>Tenemos {this.props.ingredients.length} ingredientes</h1>
-                      <div className="container">
+                      <div className="container_ingredients">
                       {this.props.ingredients.map((ingredient,index) => {
                           return <IngredientPreview key={ingredient.id} {...ingredient} />
                       })}

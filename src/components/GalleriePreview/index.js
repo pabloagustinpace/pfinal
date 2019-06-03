@@ -5,7 +5,7 @@ import './style.scss';
 
 const GalleriePreview = ({id,title,photos}) => {
   return(
-  <div className="card">
+  <div className="card_gallerie">
     <Link to={`/galleries/${id}`}>
       <img alt="" src={photos ? photos[0].url : nullimage}/>
     </Link>
